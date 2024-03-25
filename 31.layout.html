@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Basic Layouts</title>
+    <style>
+        .column {
+            float: left;
+            padding: 10px;
+        }
+
+        /*left and right column*/
+        .column.rightside {
+            width: 25%;
+        }
+
+        /*Middle column*/
+        .column.middle {
+            width: 75%;
+        }
+
+        /*Clear floats after the column*/
+        .row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /*Responsive Layout - makes the three columns stack on top of each other instead of next to each other*/
+        @media screen and (max-width:600px) {
+
+            .column.side,
+            .column.middle {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            <center>Loreum Ipsum</center>
+        </h1>
+    </div>
+    <div class="column middle">
+        <h2>
+            <center>Main content</center>
+        </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta tempora alias debitis ipsum veritatis vero
+            enim, iure ea unde maiores voluptate ad blanditiis voluptas officia est! Nulla natus sunt.
+        </p>
+    </div>
+    <div class="rightside">
+        <h3>Side</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit......</p>
+    </div>
+</body>
+
+</html>

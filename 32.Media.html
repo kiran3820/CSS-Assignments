@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Queries</title>
+        <style>
+            body{background-color: rgb(192, 181, 181);}
+            h1{color: gold;}
+            .wrapper{overflow: auto;}
+
+            #main{margin-left: 4px;}
+
+            #leftsidebar{
+                float: none;
+                width: auto;
+            }
+
+            #menulist {
+                margin: 0;
+                padding: 0;
+            }
+
+            .menulist{
+                background: #CdF0F6;
+                border: 1px solid #d4d4d4;
+                border-radius: 4px;
+                list-style-type: none;
+                margin: 4px;
+                padding: 2px;
+            }
+
+            @media screen and (min-width:480px) {
+                #leftsidebar{width: 200px;float: left;}
+                #main{margin-left: 216px;}
+            }
+        </style>
+    </head>
+    <body>
+    <h1>Media Queries</h1>
+    <div class="wrapper">
+        <div id="leftsidebar">
+           <ul id="menulist">
+            <li class="menuitem">Pizza 60rs</li>
+            <li class="menuitem">Burger 90rs</li>
+            <li class="menuitem">French Fries 60rs</li>
+            <li class="menuitem">Panner puff 40rs</li>
+            <li class="menuitem">Aloo puff 40rs</li>
+           </ul>
+    </div>
+
+    <div id="main">
+        <p>Here there are many delicious items with low budget...!For more items and for more Details plase Visit our page 7th Heaven.</p>
+    </div>
+    </div>
+    </body>
+</html>
